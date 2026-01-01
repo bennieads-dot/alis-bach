@@ -330,7 +330,8 @@
         }
 
         /* Details/Summary Styling */
-        details {
+        details,
+        .packing-day {
             margin-bottom: 2rem;
             background-color: white;
             border: 8px solid transparent;
@@ -349,9 +350,9 @@
             box-shadow: 0 20px 60px rgba(107, 154, 184, 0.25);
         }
 
-        summary {
+        summary,
+        .packing-header {
             padding: 2rem 2.5rem;
-            cursor: pointer;
             font-family: 'Playfair Display', serif;
             font-size: clamp(1.5rem, 3vw, 2rem);
             color: var(--text-blue);
@@ -360,6 +361,10 @@
             position: relative;
             user-select: none;
             transition: all 0.3s ease;
+        }
+
+        summary {
+            cursor: pointer;
         }
 
         summary::-webkit-details-marker {
@@ -400,9 +405,10 @@
         /* Image Gallery Grid */
         .image-gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
             gap: 1.5rem;
             padding: 2.5rem;
+            justify-content: center;
         }
 
         .gallery-item {
@@ -704,14 +710,12 @@
             <h2>What to Wear</h2>
 
             <!-- Day 1 -->
-            <details>
-                <summary>
+            <div class="packing-day">
+                <div class="packing-header">
                     Thursday
                     <span class="day-theme">Comfy clothes to lounge in upon arrival</span>
-                </summary>
-                <div class="image-gallery">
                 </div>
-            </details>
+            </div>
 
             <!-- Day 2 -->
             <details>
@@ -721,24 +725,29 @@
                         <br>Beach Day: Feel free to wear any 
                         color or type of bathing suite you feel most comfortable in!</br>
                         <br>Dinner & Drinks: Seashells & Wedding Bells Theme
-                        <div style="margin-left: 2rem; margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-blue); font-style: italic;">Ali plans to wear pure white and asks that we wear neutrals: cream, beige, brown, silver, gold. Feel free to throw some sequins in there too!</div>
-                    </br></span>
+                            <div style="margin-left: 2rem; margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-blue); font-style: italic;">Ali plans to wear pure white and asks that we wear neutrals: cream, beige, brown, silver, gold. Feel free to throw some sequins in there too!
+                            </div>
+                        </br>
+                    </span>
                 </summary>
                 <div class="image-gallery">
-                        <div class="placeholder-image">🐚</div>
-                        <img src="sw.jpg" alt="Girl in a jacket" width="300" height="400">
-                    </div>
+                        <div class="gallery-item">
+                            <img src="sw.jpg" alt="Seashells & Wedding Bells outfit inspiration">
+                        </div>
                 </div>
             </details>
 
             <!-- Day 3 -->
-            <details>
-                <summary>
+            <div class="packing-day">
+                <div class="packing-header">
                     Saturday
-                    <span class="day-theme">Boat Day: Feel free to wear any 
+                    <span class="day-theme">Boat Day: Feel free to wear any
                         color or type of bathing suite you feel most comfortable in!</br>
                         <br>Pajama Dinner & Drinks: After a long boat day in the sun we will get comfy and relax with dinner at the Airbnb.
-                </summary>
+                    </span>
+                </div>
+            </div>
+
         </div>
     </section>
 
